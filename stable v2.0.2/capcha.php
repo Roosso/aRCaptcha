@@ -4,7 +4,7 @@
 |	Title: Protect Form (Capcha)
 |	Version: 2.0.2
 |	Release: Feb 2007
-|	Homepage: http://www.roosso.info
+|	Homepage: http://www.black-web.ru
 |	Copyright (c) 2007 alex Roosso.
 |	All rights reserved.
 |	===================================
