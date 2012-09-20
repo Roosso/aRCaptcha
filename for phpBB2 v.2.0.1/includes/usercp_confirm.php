@@ -68,10 +68,10 @@ else
 
 /*=======================================
 |	This script was developed by alex Roosso .
-|	Title: Protect Form (Capcha)
+|	Title: Protect Form (Captcha)
 |	Version: 2.0.1
 |	Release: Feb 2007
-|	Homepage: http://www.roosso.info
+|	Homepage: http://www.black-web.ru
 |	Copyright (c) 2007 alex Roosso.
 |	All rights reserved.
 |	===================================
