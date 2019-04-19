@@ -33,7 +33,7 @@
 ========================================*/
 
 
-$path = "capchabg";  //Name folder backgrounds
+$path = "captchabg";  //Name folder backgrounds
 $num = 6;	//How many symbols in code
 
 
