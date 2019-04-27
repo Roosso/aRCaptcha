@@ -261,7 +261,6 @@ class aRCaptcha {
 	private static function get_font() {
 
 		# Select random fonts
-		$fonts = array();
 		$fonts = glob(dirname(__FILE__)."/".self::$font_path."/*.ttf", GLOB_BRACE);
 
 		# choice font
@@ -278,8 +277,6 @@ class aRCaptcha {
 	 * @return array
 	 */
 	private static function get_random_rgb() {
-
-		$color = array();
 
 		$hash = md5(self::$palette . mt_rand(0,20));
 		return array(
