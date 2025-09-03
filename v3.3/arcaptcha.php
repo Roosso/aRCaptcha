@@ -1,7 +1,7 @@
 <?php
 /**
-* aR Captcha - Protect Form v3.2
-* @copyright © 2007-2019 alexandr Belov aka alex Roosso.
+* aR Captcha - Protect Form v3.3
+* @copyright © 2007-2025 alexandr Belov aka alex Roosso.
 * @author    alex Roosso <info@roocms.com>
 * @link      http://www.roocms.com
 * @license   MIT
@@ -258,8 +258,19 @@ class aRCaptcha {
 	 */
 	private static function get_font() {
 
+		# Validate font path to prevent path traversal
+		$font_path = realpath(dirname(__FILE__)."/".self::$font_path);
+		if (!$font_path || !is_dir($font_path)) {
+			throw new Exception("Invalid font path: " . self::$font_path);
+		}
+
 		# Select random fonts
-		$fonts = glob(dirname(__FILE__)."/".self::$font_path."/*.ttf", GLOB_BRACE);
+		$fonts = glob($font_path."/*.ttf", GLOB_BRACE);
+
+		# Check if fonts array is not empty
+		if (empty($fonts)) {
+			throw new Exception("No fonts found in path: " . $font_path);
+		}
 
 		# choice font
 		$font = array();
